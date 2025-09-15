@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MauiAuthApp.ViewModels"
+             x:DataType="viewModels:RegisterViewModel"
+             x:Class="MauiAuthApp.Views.RegisterPage"
+             Title="Kayıt Ol">
+    <VerticalStackLayout Padding="30,0" Spacing="25" VerticalOptions="Center">
+        <Label Text="Yeni Hesap Oluştur" FontSize="24" HorizontalOptions="Center" />
+        <Entry Placeholder="E-posta" Text="{Binding Email}" Keyboard="Email" />
+        <Entry Placeholder="Şifre" Text="{Binding Password}" IsPassword="True" />
+        <Button Text="Kayıt Ol" Command="{Binding RegisterCommand}" />
+    </VerticalStackLayout>
+</ContentPage>

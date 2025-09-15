@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:MauiAuthApp.ViewModels"
+             x:DataType="viewModels:LoginViewModel"
+             x:Class="MauiAuthApp.Views.LoginPage"
+             Title="Giriş Yap">
+    <VerticalStackLayout Padding="30,0" Spacing="25" VerticalOptions="Center">
+        <Label Text="Uygulamaya Hoş Geldiniz!" FontSize="24" HorizontalOptions="Center" />
+        <Entry Placeholder="E-posta" Text="{Binding Email}" Keyboard="Email" />
+        <Entry Placeholder="Şifre" Text="{Binding Password}" IsPassword="True" />
+        <Button Text="Giriş Yap" Command="{Binding LoginCommand}" />
+        <Button Text="Hesabınız yok mu? Kayıt Olun" Command="{Binding GoToRegisterCommand}" FontAttributes="Bold" TextColor="Gray" BackgroundColor="Transparent" />
+    </VerticalStackLayout>
+</ContentPage>
